@@ -10,6 +10,7 @@ module "asg" {
 
   security_group_ids = [module.tunnel-sg.id]
   subnet_id          = var.subnet_id
+  data_volumes       = []
   assign_eip         = true
 
   init_suffix = <<END_INIT_SUFFIX
